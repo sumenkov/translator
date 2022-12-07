@@ -7,3 +7,5 @@ public class Main {
         System.out.println(YandexTranslate.translate("ru", args[0]));
     }
 }
+
+// https://www.programmersought.com/article/5656987446/
