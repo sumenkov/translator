@@ -15,24 +15,24 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
-public class GoogleTranslateTest {
+public class GoogleTranslate {
 
     private static final String PATH = "https://translate.googleapis.com/translate_a/single"; //address
     private static final String CLIENT = "gtx";
 
     private static final String USER_AGENT = "Mozilla/5.0";
-    //"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36";
+    // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36";
 
     private static final Map<String, String> LANGUAGE_MAP = new HashMap<>();
 
-    private static GoogleTranslateTest _instance = null;
+    private static GoogleTranslate _instance = null;
 
     /**
      * Get a singleton
      */
-    public static GoogleTranslateTest getInstance() {
+    public static GoogleTranslate getInstance() {
         if (null == _instance) {
-            _instance = new GoogleTranslateTest();
+            _instance = new GoogleTranslate();
             _instance.init();
         }
         return _instance;
@@ -224,7 +224,7 @@ public class GoogleTranslateTest {
     private String postHttp(List<NameValuePair> nvps) {
         String responseStr = null;
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost(GoogleTranslateTest.PATH);
+        HttpPost httpPost = new HttpPost(GoogleTranslate.PATH);
         //important! ! The http header must be set, otherwise it will be garbled
         httpPost.setHeader("User-Agent", USER_AGENT);
         CloseableHttpResponse response2 = null;
