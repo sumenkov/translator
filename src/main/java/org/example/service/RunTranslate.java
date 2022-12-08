@@ -31,7 +31,7 @@ public class RunTranslate {
 
     private void translateName(String text, String sourceLang) throws Exception {
         for (String lang: targetLang) {
-//            System.out.println(text + " " + sourceLang + " " + lang);
+            System.out.printf("Переводим на %s ...", lang.toUpperCase());
             switch (lang) {
                 case "en" -> this.langModel.setEn(gt.translateText(text, sourceLang, lang));
                 case "ru" -> this.langModel.setRu(gt.translateText(text, sourceLang, lang));
