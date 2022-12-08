@@ -1,6 +1,6 @@
-package org.example;
+package org.example.model;
 
-public class InDataModel {
+public class InData {
     private String name;
     private String title;
     private String description;

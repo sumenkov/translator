@@ -1,6 +1,6 @@
-package org.example;
+package org.example.model;
 
-public class LangModel {
+public class Languages {
     private String en;
     private String ru;
     private String id;

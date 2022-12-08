@@ -1,16 +1,20 @@
-package org.example;
+package org.example.service;
+
+import org.example.model.InData;
+import org.example.model.Languages;
+import org.example.repository.GoogleTranslate;
 
 public class RunTranslate {
 
-    private LangModel langModel;
+    private Languages langModel;
     private final String[] targetLang = {"en", "ru", "id", "es", "fr", "de", "it", "pl", "nl", "ms", "ca", "da", "sw",
             "nb", "pt", "ro", "fi", "sv", "tl", "tr", "vi", "el", "ar", "he", "fa", "ur", "hi", "bn", "si", "my", "th",
             "zh", "ko", "ja", "am", "hy", "km", "sq", "uk", "uz", "kk", "ky", "tg", "az", "ka", "et", "lv", "lt", "cs",
             "sk", "hu", "bg", "hr", "sl", "is", "mn", "lo"};
     GoogleTranslate gt = GoogleTranslate.getInstance();
 
-    public LangModel runTranslate(InDataModel inDataModel, String keyName) {
-        langModel = new LangModel();
+    public Languages runTranslate(InData inDataModel, String keyName) {
+        langModel = new Languages();
 
         try {
             switch (keyName) {

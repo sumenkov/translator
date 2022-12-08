@@ -1,4 +1,4 @@
-package org.example;
+package org.example.repository;
 
 import com.alibaba.fastjson.JSONArray;
 import org.apache.http.HttpEntity;

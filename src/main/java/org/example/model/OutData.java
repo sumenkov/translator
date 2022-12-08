@@ -1,31 +1,31 @@
-package org.example;
+package org.example.model;
 
-public class OutDataModel {
-    private LangModel name;
-    private LangModel title;
-    private LangModel description;
+public class OutData {
+    private Languages name;
+    private Languages title;
+    private Languages description;
 
-    public LangModel getName() {
+    public Languages getName() {
         return name;
     }
 
-    public void setName(LangModel name) {
+    public void setName(Languages name) {
         this.name = name;
     }
 
-    public LangModel getTitle() {
+    public Languages getTitle() {
         return title;
     }
 
-    public void setTitle(LangModel title) {
+    public void setTitle(Languages title) {
         this.title = title;
     }
 
-    public LangModel getDescription() {
+    public Languages getDescription() {
         return description;
     }
 
-    public void setDescription(LangModel description) {
+    public void setDescription(Languages description) {
         this.description = description;
     }
 
